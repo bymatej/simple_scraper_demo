@@ -1,7 +1,10 @@
-import urllib.request
-import urllib.parse
-import re
 import html
+import re
+import urllib.parse
+import urllib.request
+
+# Control if whole response should be printed in the console or not
+is_print_response_data = False  # Set to True for debugging purposes
 
 
 def run_google_search():
@@ -13,6 +16,7 @@ def run_google_search():
     # Read the website
     response_data = get_response_data(url)
     # Parse response data and print out the results
+    print("GOOGLE SEARCH RESULTS:\n")
     parse_response_data(response_data)
 
 
@@ -37,9 +41,10 @@ def get_response_data(url):
     response = urllib.request.urlopen(request)
     response_data = response.read().decode("UTF-8")  # Decode in UTF-8
 
-    print("Full response data: ")
-    print(response_data)
-    print("\n")
+    if is_print_response_data:
+        print("Full response data: ")
+        print(response_data)
+        print("\n")
 
     return response_data
 
