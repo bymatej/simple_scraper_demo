@@ -24,3 +24,8 @@ It is used to control whether the whole response of the whole page will be print
 
 ## Further improvements
 Storing the output to a text file.
+
+## Run the application in web browser
+The App can be run in web browser on Repl.it
+
+This is the link to the app: https://repl.it/@bymatej/simplescraperdemo#App.py
